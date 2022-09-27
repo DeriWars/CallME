@@ -1,0 +1,28 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/form.css') }}">
+    <title>CallME! - Login</title>
+</head>
+
+<body>
+    <div class="center">
+        <form action="" method="POST">
+            <h1>Login</h1>
+
+            {% if error %}
+            <p class="error">{{error}}</p>
+            {% endif %}
+
+            <label for="phone_number">Phone number</label>
+            <input type="phone" name="phone_number" id="phone_number" autofocus>
+            <p>You don't have an account yet ? <a href="/signup">Sign up.</a></p>
+            <input type="submit" value="Validate">
+        </form>
+    </div>
+</body>
+
+</html>
